@@ -11,8 +11,8 @@ from langchain.chains import ConversationalRetrievalChain
 from langchain.vectorstores import DocArrayInMemorySearch
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
-st.set_page_config(page_title="LangChain: Chat with Documents", page_icon="🦜")
-st.title("🦜 LangChain: Chat with Documents")
+st.set_page_config(page_title="Rosy Wellness", page_icon="🌹")
+st.title("🌹 Rosy Wellness AI")
 
 
 @st.cache_resource(ttl="1h")
@@ -103,7 +103,7 @@ qa_chain = ConversationalRetrievalChain.from_llm(
 
 if len(msgs.messages) == 0 or st.sidebar.button("Clear message history"):
     msgs.clear()
-    msgs.add_ai_message("How can I help you?")
+    msgs.add_ai_message("Hello! I'm Rosy Wellness AI. How can I help you today?")
 
 avatars = {"human": "user", "ai": "assistant"}
 for msg in msgs.messages:
